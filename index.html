@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+    <title>Canvas tests</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="transparentBackground"></div>
+    <div class="app">
+      <div class="mainWindow">
+        <div class="toolBar">
+          <div class="toolButtons"></div>
+          <div class="toolButton" id="saveImage" title="Save image">
+            <span class="fa fa-download"></span>
+          </div>
+        </div>
+        <div class="canvasWrapper">
+          <canvas class="canvas" id="canvas"></canvas>
+        </div>
+      </div>
+      <div class="bottomBar">
+        <div class="colors"></div>
+        <div class="toolOptions"></div>
+      </div>
+      <div id="coords"></div>
+    </div>
+
+    <script src="./classes/Vector.js"></script>
+    <script src="./classes/figures/Line.js"></script>
+    <script src="./classes/figures/Polygon.js"></script>
+
+    <script src="./classes/Helper.js"></script>
+    <script src="./classes/tools/Tool.js"></script>
+    <script src="./classes/tools/ToolWithColors.js"></script>
+    <script src="./classes/tools/SelectTool.js"></script>
+    <script src="./classes/tools/BrushTool.js"></script>
+    <script src="./classes/tools/PolygonTool.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>

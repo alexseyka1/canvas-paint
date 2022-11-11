@@ -1,0 +1,203 @@
+html,
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.app {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.mainWindow {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+}
+
+.toolBar {
+  width: 36px;
+  background-color: #455a64;
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem;
+  justify-content: space-between;
+}
+
+.toolBar .toolButtons {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.toolBar .toolButton {
+  color: #fff;
+  border: 1px solid #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 1;
+}
+.toolBar .toolButton:hover {
+  color: #263238;
+  background-color: #ccc;
+}
+.toolBar .toolButton.active {
+  color: #263238;
+  background-color: #fff;
+  border: none;
+}
+
+.bottomBar .toolOptions {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+  flex: 1;
+  align-items: stretch;
+  height: 100%;
+}
+
+.btn {
+  color: #fff;
+  border: 1px solid #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: default;
+  padding: 0.5rem;
+  user-select: none;
+}
+.btn-success {
+  border-color: #4caf50;
+  background-color: #4caf50;
+}
+.btn:hover {
+  color: #263238;
+  background-color: #ccc;
+}
+
+.canvasWrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.transparentBackground {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.transparentBackground::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: repeating-linear-gradient(0deg, #888 0, #888 20px, #aaa 20px, #aaa 40px);
+}
+.transparentBackground::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: repeating-linear-gradient(90deg, #888 0, #888 20px, #aaa 20px, #aaa 40px);
+  mix-blend-mode: difference;
+}
+
+.cursorCanvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.canvas {
+  width: 100px;
+  height: 100px;
+}
+
+.bottomBar {
+  height: 40px;
+  background-color: #37474f;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0.5rem;
+  gap: 1rem;
+}
+
+.bottomBar .colors {
+  display: flex;
+  flex-direction: row;
+  gap: 0.25rem;
+}
+
+#coords {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 0.25rem 0.5rem;
+  font-family: monospace;
+}
+
+/**
+ * COLOR
+ */
+input[type="color"] {
+  width: 32px;
+  height: 32px;
+  border: 1px solid #fff;
+  outline: none;
+  padding: 0;
+}
+input[type="color"]::-webkit-color-swatch-wrapper {
+  padding: 0;
+}
+input[type="color"]::-webkit-color-swatch {
+  border: none;
+}
+
+/**
+ * RANGE
+ */
+input[type="range"] {
+  height: 28px;
+  -webkit-appearance: none;
+  margin: 10px 0;
+  width: 100%;
+  background: transparent;
+  width: 200px;
+}
+input[type="range"]:focus {
+  outline: none;
+}
+input[type="range"]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 8px;
+  cursor: pointer;
+  animate: 0.2s;
+  box-shadow: 1px 1px 1px #000000;
+  background: #ffffff;
+  border-radius: 15px;
+  border: 1px solid #000000;
+}
+input[type="range"]::-webkit-slider-thumb {
+  box-shadow: 1px 1px 1px #000000;
+  border: 1px solid #000000;
+  height: 20px;
+  width: 20px;
+  border-radius: 20px;
+  background: #f44336;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -7px;
+}
+input[type="range"]:focus::-webkit-slider-runnable-track {
+  background: #ffffff;
+}
